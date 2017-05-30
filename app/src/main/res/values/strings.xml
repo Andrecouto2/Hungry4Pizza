@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Hungry 4 Pizza</string>
+    <string name="conectar">Conectar</string>
+    <string name="hint_login">Usuário</string>
+    <string name="hint_password">Senha</string>
+    <string name="atum">Atum</string>
+    <string name="bacon">Bacon</string>
+    <string name="mussarela">Mussarela</string>
+    <string name="calabresa">Calabresa</string>
+    <string name="escolha_a_s_pizza_s">Escolha a(s) pizza(s)</string>
+    <string name="tamanho_das_pizza">Tamanho das pizza</string>
+    <string name="m_dio">Médio</string>
+    <string name="pequeno">Pequeno</string>
+    <string name="grande">Grande</string>
+    <string name="forma_de_pagamento">Forma de pagamento</string>
+    <string name="refrigerante">Refrigerante</string>
+    <string name="sobremesa">Sobremesa</string>
+    <string name="recheio_extra">Recheio Extra</string>
+    <string name="borda_recheada">Borda Recheada</string>
+    <string name="calcular">Calcular</string>
 </resources>

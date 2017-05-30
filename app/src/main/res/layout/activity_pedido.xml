@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pedido"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.hungry4pizza.hungry4pizza.PedidoActivity">
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_right"
+        tools:text="Olá fulano"/>
+
+    <TextView
+        android:id="@+id/txtPizzas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_below="@+id/txtLogin"
+        android:text="@string/escolha_a_s_pizza_s"/>
+
+    <LinearLayout
+        android:id="@+id/linearFirstCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPizzas"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <CheckBox
+            android:id="@+id/checkboxAtum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/atum"
+            android:layout_weight="50"/>
+        <CheckBox
+            android:id="@+id/checkboxBacon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bacon"
+            android:layout_weight="50"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearSecondCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearFirstCheck"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <CheckBox
+            android:id="@+id/checkboxCalabresa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calabresa"
+            android:layout_weight="50"/>
+        <CheckBox
+            android:id="@+id/checkboxMussarela"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/mussarela"
+            android:layout_weight="50"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtTmPizzas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_below="@+id/linearSecondCheck"
+        android:text="@string/tamanho_das_pizza"/>
+
+    <LinearLayout
+        android:id="@+id/linearThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTmPizzas"
+        android:orientation="vertical">
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/radioPequeno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pequeno"/>
+            <RadioButton
+                android:id="@+id/radioMedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/m_dio"/>
+            <RadioButton
+                android:id="@+id/radioGrande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grande"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtFormaPagamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_below="@+id/linearThird"
+        android:text="@string/forma_de_pagamento"/>
+    <Spinner
+        android:id="@+id/spFormadePagamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/formadepagamentos"
+        android:layout_below="@id/txtFormaPagamento">
+    </Spinner>
+
+    <LinearLayout
+        android:id="@+id/linearFourCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spFormadePagamento"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <CheckBox
+            android:id="@+id/checkboxBordaRecheada"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/borda_recheada"
+            android:layout_weight="50"/>
+        <CheckBox
+            android:id="@+id/checkboxRecheioExtra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recheio_extra"
+            android:layout_weight="50"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearFiveCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearFourCheck"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <CheckBox
+            android:id="@+id/checkboxRefrigerante"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/refrigerante"
+            android:layout_weight="50"/>
+        <CheckBox
+            android:id="@+id/checkboxSobremesa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sobremesa"
+            android:layout_weight="50"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="calcular"
+        android:layout_alignParentBottom="true"
+        android:text="@string/calcular" />
+
+
+
+
+</RelativeLayout>

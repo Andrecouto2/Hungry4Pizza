@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        carregar();
     }
 
     private void carregar() {
@@ -31,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.this,
-                        MainActivity.class);
+                        LoginActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
-                SplashActivity.this.finish();
+                MainActivity.this.finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
     }
